@@ -3,7 +3,7 @@
 
 I was really iritated how the argparse module works in python. Even replacements were no good, so I decided to write my own, for my own needs. 
 ###What is argparx?
-argparx stands for **arg**ument **par**ser **x**(tra) simple
+argparx stands for <b>arg</b>ument <b>par</b>ser <b>x</b>(tra) simple
 
 ###What are pros and cons of argparx?
 | Pros | Cons |
@@ -18,7 +18,7 @@ You need to start with initial setup
 import argparx
 parser = argparx.ArgParserX()
   ```
-Then you have to **take** your **arg**uments and setup your **program** **def**inition
+Then you have to <b>take</b> your <b>arg</b>uments and setup your <b>program</b> <b>def</b>inition
   ```python
 parser.take_args()
 parser.program_def("Example")
@@ -34,8 +34,8 @@ parser.help_arg() #5
 First two are self-explanatory. 3rd is a flag. Flags always returns True or 1 (or False if not called). 4th is a positional argument, you define argname, which displays in '--help' prompt and a <b>pos</b>ition (it can be 'start' or 'end'). 5th is initialization function of "--help" command - without it there's no "--help".
 
 ###TO-DO
-[ ] Multi-command support
-[ ] Rewrite pos_arg() code
+- Do multi-command support
+- Rewrite pos_arg() code
 
 ###Requirements
 * Python 2.7 - get it from [the official python website](https://www.python.org/download/releases/2.7.6/)
