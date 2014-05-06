@@ -38,8 +38,6 @@ class ArgParserX(object):
                     sys.exit()
                 else:
                     return 0
-            elif "--help" in list(start_arg):
-                return 0
             else:
                 return start_arg
         elif pos == 'end':
