@@ -33,8 +33,13 @@ class ArgParserX(object):
         if pos == 'start':
             start_arg = sys.argv[1]
             if "-" in list(start_arg):
-                print "Not vailid positional argument! Checkout \'"+sys.argv[0]+" --help\'. Terminating now."
-                sys.exit()
+                if "--help" in list(start_arg):
+                    print "Not vailid positional argument! Checkout \'"+sys.argv[0]+" --help\'. Terminating now."
+                    sys.exit()
+                else:
+                    return 0
+            elif "--help" in list(start_arg):
+                return 0
             else:
                 return start_arg
         elif pos == 'end':
@@ -42,8 +47,11 @@ class ArgParserX(object):
             x = len(x)
             end_arg = sys.argv[x]
             if "-" in list(end_arg):
-                print "Not vailid positional argument! Checkout \'"+sys.argv[0]+" --help\'. Terminating now."
-                sys.exit()
+                if "--help" in list(end_arg):
+                    print "Not vailid positional argument! Checkout \'"+sys.argv[0]+" --help\'. Terminating now."
+                    sys.exit()
+                else:
+                    return 0
             else:
                 return end_arg
         else:
